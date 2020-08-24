@@ -1,0 +1,55 @@
+server:
+  port: 8080
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+#    throw-exception-if-no-handler-found: true
+
+  #    throw-exception-if-no-handler-found: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/soso?useUnicode=true&characterEncoding=utf8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+#  resources:
+#    add-mappings: false
+#  resources:
+#    add-mappings: false
+#jdbc:
+#  driverClass: com.mysql.jdbc.Driver
+#  url: jdbc:mysql://127.0.0.1:3306/soso?useUnicode=true&characterEncoding=utf-8
+#  username: root
+#  password: 123456
+
+
+
+#jdbc:
+#  dataSourceClassName: com.mysql.jdbc.jdbc2.optional.MysqlDataSource
+#  url: jdbc:mysql://127.0.0.1:3306/soso?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
+#  databaseName: user
+#  serverName: 127.0.0.1
+#  username: root
+#  password: 123456
+#  cachePrepStmts: true
+#  prepStmtsSize: 250
+#  prepStmtsCacheSqlLimit: 2048
+#  userServerPrepStmts: true
+
+mybatis:
+  typeAliasesPackage: com.sublimation.art.pojo
+  mapperLocations: classpath:/Mappers/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+#mybatis-plus:
+#  mapper-locations: classpath:/mappers/*.xml
+#  type-aliases-package: com.sublimation.art.pojo.*
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#  配置pagehelper参数
+#pagehelper:
+#  helper-dialect: mysql
+#  reasonable: true
+#  support-methods-arguments: true
+#  params: count=countSql
